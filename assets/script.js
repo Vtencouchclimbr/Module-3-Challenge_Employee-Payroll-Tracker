@@ -1,5 +1,5 @@
 
-let employees =[];
+let employees = [];
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
@@ -12,7 +12,7 @@ const collectEmployees = function () {
 while (add) {
   let firstName = prompt("Enter first name");
   let lastName = prompt("Enter last name");
-  let salaryAdd = (prompt("Enter salary"));
+  let salaryAdd = prompt("Enter salary");
 
   let salary = parseFloat(salaryAdd);
   if (isNaN(salary)) {
@@ -25,9 +25,7 @@ while (add) {
     salary: salary
   };
 
-employeesArray.push(newEmployee);
-
-adMore = confirm("Add another employee?");
+employeesArray.push(employee);
 }
 
 return employeesArray;
@@ -38,13 +36,19 @@ return employeesArray;
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
-  
+  let totalSalary = employeesArray.reduce((sum, employee) => sum + employee.salary, 0);
+  let averageSalary = totalSalary / employeesArray.length;
+
+  console.log("The average salary is " + ${averageSalary});
 };
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
-  
+  let randomIndex = Math.floor(Math.random() * employeesArray.length);
+  let randomEmployee = employeesArray[randomIndex];
+
+  console.log(randomEmployee);
 };
 
 /*
