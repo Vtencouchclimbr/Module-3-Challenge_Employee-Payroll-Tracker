@@ -19,13 +19,15 @@ while (add) {
     salary = 0;
   }
     
-  let newEmployee = {
+  let employee = {
     firstName: firstName,
     lastName: lastName,
     salary: salary
   };
 
 employeesArray.push(employee);
+
+add = confirm("Do you want to add more?");
 }
 
 return employeesArray;
