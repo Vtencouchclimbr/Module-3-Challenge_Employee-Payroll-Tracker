@@ -11,31 +11,52 @@
 
 ## Description
 
-The third challenge of the class, and the most exciting so far. Javascript is very engaging and the logic is something to work toward. This project tracks employee information as well as returning an everage salary to the console, and choosing an employee at random. To do this, it requires three funtcions on my part. First, prompting the user for information and organizing that information in an object (See examples 1 and 2 below). Then we calculate an average salary and report that to the console using a template literal (See example 3 below). Finally, we choose a random employee for a contest using the Math and random methods (See example 4 below). 
+Employee Tracker is a command-line application built using JavaScript that allows users to manage and organize company employee data. This project tracks employee information as well as returning an everage salary to the console, and choosing an employee at random. To do this, it requires three funtcions. First, prompting the user for information and organizing that information in an object (See examples 1 and 2 below). Then we calculate an average salary and report that to the console using a template literal (See example 3 below). Finally, we choose a random employee for a contest using the Math and random methods (See example 4 below). 
 
 Visit the deployed site here: https://vtencouchclimbr.github.io/Module-3-Challenge_Employee-Payroll-Tracker/
 Visit the github repo here: https://github.com/Vtencouchclimbr/Module-3-Challenge_Employee-Payroll-Tracker
 
 ~~~js
 Example 1: 
-const firstName = prompt("Enter first name?");
-    const lastName = prompt("Enter last name?");
-    const salaryAdd = prompt("Enter yearly salary?");
+for (let i = 0; i < employeeCount; i++) {
+    const firstName = prompt('Enter the employee\'s first name');
+    const lastName = prompt('Enter the employee\'s last name');
+    const salary = parseFloat(prompt('Enter the employee\'s salary'));
 
 Example 2:
-let employee = {
-      firstName: firstName,
-      lastName: lastName,
-      salary: salary
-    };
-
+let totalSalary = 0;
+  for (let i = 0; i < employeesArray.length; i++) {
+    totalSalary += employeesArray[i].salary;
+  }
+  const averageSalary = totalSalary / employeesArray.length;
+  alert('The average salary is ' + averageSalary);
 Example 3:
-console.log(`The average employee salary between our ${employeesArray.length} employee(s) is ${averageSalary.toFixed(2)}.`);
+let totalSalary = 0;
+  for (let i = 0; i < employeesArray.length; i++) {
+    totalSalary += employeesArray[i].salary;
+  }
+  const averageSalary = totalSalary / employeesArray.length;
+  alert('The average salary is ' + averageSalary);
+};
 
 Example 4:
-const randomIndex = Math.floor(Math.random() * employeesArray.length);
+alert(
+    'Random Employee: ' +
+      randomEmployee.firstName +
+      ' ' +
+      randomEmployee.lastName +
+      ' ' +
+      randomEmployee.salary
+  );
 ~~~
 
 ## License
+This project is not currently licensed
 
-This is the section where I will eventually put a license
+## Tests
+There are currently no tests written for this application.
+
+## Questions
+If you have any questions, please reach out to me:
+- Github: [vtencouchclimbr](https://github.com/vtencouchclimbr)
+- Email: lmntrylmnt@gmail.com
